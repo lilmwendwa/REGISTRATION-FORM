@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registrationForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+
+    <button type="button" onclick="resetForm()">Reset</button>
+    <button type="button" onclick="closeForm()">Close</button>
+  </form>
+
+  <script>
+    function resetForm() {
+      document.getElementById("registrationForm").reset();
+    }
+
+    function closeForm() {
+      // You can implement the close functionality here, e.g., close the window or navigate away
+      alert("Closing the form. Implement your close logic here.");
+    }
+  </script>
+
+</body>
+</html>
